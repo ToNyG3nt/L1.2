@@ -1,0 +1,3 @@
+def indice(liste):
+    for elm in liste:
+        print(f"l'élément n°{elm} est {liste[elm]}
