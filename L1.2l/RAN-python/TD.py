@@ -40,6 +40,8 @@ def presin(L,n):
         return True
     print("l'élément n'est pas présent")
     return False
+
+
     
 def prewhile(L):
         x = int(input("entrer un x"))
@@ -59,4 +61,34 @@ def prewhile(L):
 
 #exercice 14
 
-def traduction
+def traduct(trad):
+    i=0
+    while i<len(trad):
+        print(A[i])
+        i+=1
+
+#exercice 15
+
+def puissenti(x,n):    
+    for i in range(n-1):
+        x*=x
+    return x
+print(puissenti(5,3))
+
+#exercice 16
+def primal(nbre):
+    if nbre == 0 or x == 1 :
+        return False
+    elif nbre == 2 :
+        return True
+    elif nbre%2 == 0 :
+        return False 
+    else :
+        for i in range(2,sqrt(nbre)):
+            if nbre%i == 0 :
+                print("c'est bon")
+                return True
+        print("c'est pas bon")
+        return False
+
+        
