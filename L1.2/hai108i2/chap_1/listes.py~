@@ -1,4 +1,4 @@
-liste=[4,10,2,24,1,10]
+liste=[4,10,2,24,1,10,5]
 
 def exercice1(l1):
     somme=0
@@ -99,9 +99,53 @@ def exercice4(chaine):
 #exercice 5: EZ
 
 #exercice 6: meme que l'exercice 2
-
-def exercice7(x):
-    for i in range(2,x-1):
+from math import *
+def estPremier(x):
+    if x==1 or x==0:
+        return False
+    if x==2:
+        True
+    if x%2==0:
+        return False
+    i=2
+    while i<=int(sqrt(x)):
         if x%i==0:
-            print(f"l'entier {x} n'est pas premier")
             return False
+        i+=1
+    return True
+
+print(estPremier(7934))
+def exercice8(liste):
+    #affiche les nombre premiers de la liste
+    for elem in liste:
+        if estPremier(elem):
+            print(elem)
+
+def exercice9():
+    n=0
+    while n<0:
+        n=int(input("entrer un nombre entier :"))
+        if estPremier(n):
+            print(f"{n} est premier")
+        if n%2==0:
+            print(f"{n} est pair")
+
+
+def exercice10(n):
+    cpt=1
+    x=5
+    while cpt!=n-1:
+        if estPremier(x):
+            cpt+=1
+            x+=1
+        x+=1
+    print(f"le {n}eme nombre premier est: {x-2}")
+
+
+
+def exercice11(liste,cible):
+    for i in range(len(liste)):
+        for j in range(i+1,len(liste]-(i+1)):
+            if liste[i]+liste[j]==cible:
+                retrun False
+    return True

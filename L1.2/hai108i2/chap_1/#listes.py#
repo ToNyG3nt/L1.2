@@ -182,8 +182,14 @@ def exercice13():
     tas1=int(randint(1,20))
     tas2=int(randint(1,20))
     n=True
+    joueur=1
     while n:
-        print("Tas 1:","* "*tas1)
-        n=False
+        print("Tas 1: ","* "*tas1)
+        print("Tas 2: ","*"*tas2)
+        if tas1==0 and tas2==0:
+            n=False
+            print("c'est le joueur ",joueur,"a gagné !")
+            
+        
 exercice13()
         
