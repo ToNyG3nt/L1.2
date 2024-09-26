@@ -42,12 +42,34 @@ def presence3(liste,elem):
             return True
         n+=1
     print(f"l'element {elem} n'est pas dans la liste")
-    return False
-presence3(liste,19)            
+    return False            
 
 
-"""
-exercice 14:
+def traduction(A):
+    i=0
+    while i<len(A):
+        print(A[i])
+        i+=1
 
-affiche tout les elements de 1 un a un  (elements si liste ou ensemble, charactère si chaine de charactere)
-"""
+
+def puiss(x,n):
+    if n==1:
+        return x
+    if n==0:
+        return 1
+    produit=1
+    for i in range(n):
+        produit*=x
+    return produit
+
+def estPremier(x):
+    if x==1 or x==0:
+        return False
+    if x==2:
+        True
+    if x%2==0:
+        return False
+    for i in range(x**0.5):
+        if x%i==0:
+            return False
+    return True
