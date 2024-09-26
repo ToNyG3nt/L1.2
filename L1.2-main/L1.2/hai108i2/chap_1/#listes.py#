@@ -1,0 +1,195 @@
+liste=[4,10,2,24,1,10,5]
+
+def exercice1(l1):
+    somme=0
+    for i in l1:
+        somme+=i
+    produit=1
+    if len(l1)==0:
+        produit=0
+    else :
+        for k in l1:
+            produit*k
+    sommePairs=1
+    for j in l1:
+        if j%2==0:
+            sommePairs+=i
+    print(f"la somme des elements est: {somme}")
+    print(f"le produit des elements est: {produit}")
+    print(f"la somme des element pairs est: {sommePairs}")
+
+
+def exercice2(l1):
+    min=l1[0]
+    if l1[1]<min:
+        max=min
+        min=l1[0]
+    else:
+        max=l1[1]
+    for i in l1:
+        if i<min:
+            min=i
+        if i>max:
+            max=i
+    print(f"le minimum de la liste est:{min}")
+    print(f"le maximum de la liste est:{max}")
+    
+
+def exercice2_1(l,x):
+    if x in l:
+        print(f"l'element {x} est dans la liste")
+        return True
+    else:
+        print(f"l'element {x} n'est pas dans la liste")
+        return False
+        
+def exercice2_2(l,x):
+    occ=0
+    for elem in l:
+        if elem==x:
+            occ+=1
+    print(f"il y a {occ} fois l'element {x} dans la liste")
+
+
+def exercice3_1(l):
+    for elem in l:
+        if elem%2==0:
+            print("la liste  contient des nombres pairs")
+            return False
+    print("la liste ne contient pas d'elements pairs")
+    return False
+
+def exercice3_2(l):
+    occImpair=0
+    for elem in l:
+        if elem%2!=0:
+            occImpair+=1
+    if occImpair==1:
+        print("il y a 1 nombre impair dans la liste")
+        return True
+    else:
+        print(f"il y a {occImpair} nombre impair(s) dans la liste")
+        return False
+
+
+def exercice3_3(l):
+    for elem in l:
+        if elem%2==0:
+            print("il y a au moins un element pair dans la liste")
+            return False
+    print("il n'y a que des nombres impairs dans la liste")
+    return True
+
+def exercice4(chaine):
+    voyelle=0
+    consonne=0
+    autre=0
+    v=['a','e','y','u','i','o']
+    c=['z','r','t','p','q','s','d','f','g','h','j','k','l','m','w','x','c','v','b','n']
+    for char in chaine:
+        if char in v:
+            voyelle+=1
+        elif char in c:
+            consonne+=1
+        else:
+            autre+=1
+    print(f"il y a {voyelle} voyelles, {consonne} consonnes et {autre} characteres autres dans '{chaine}'")
+
+
+#exercice 5: EZ
+
+#exercice 6: meme que l'exercice 2
+from math import *
+def estPremier(x):
+    if x==1 or x==0:
+        return False
+    if x==2:
+        True
+    if x%2==0:
+        return False
+    i=2
+    while i<=int(sqrt(x)):
+        if x%i==0:
+            return False
+        i+=1
+    return True
+
+def exercice8(liste):
+    #affiche les nombre premiers de la liste
+    for elem in liste:
+        if estPremier(elem):
+            print(elem)
+
+def exercice9():
+    n=0
+    while n<0:
+        n=int(input("entrer un nombre entier :"))
+        if estPremier(n):
+            print(f"{n} est premier")
+        if n%2==0:
+            print(f"{n} est pair")
+
+
+def exercice10(n):
+    cpt=1
+    x=5
+    while cpt!=n-1:
+        if estPremier(x):
+            cpt+=1
+            x+=1
+        x+=1
+    print(f"le {n}eme nombre premier est: {x-2}")
+
+
+
+def exercice11(liste,cible):
+    for i in range(len(liste)):
+        for j in range(i+1,len(liste)):
+            if liste[i]+liste[j]==cible:
+                return False
+    return True
+
+def exercice12_1(d,n):
+    res=d
+    print("nombre:",res)
+    for i in range(n):
+        if res%2==0:
+            res=res/2
+            print("iteration :",i+1)
+            print(res)
+        else:
+            res=(res*3)+1
+            print("iteration: ",i+1)
+            print(res)
+    print(res)
+
+def exercice12_2(d):
+    res=d
+    cpt=0
+    print("nombre:",res)
+    while res!=1:
+        if res%2==0:
+            res=int(res/2)
+            print(res)
+            cpt+=1
+        else:
+            res=(res*3)+1
+            print(res)
+            cpt+=1
+    print("nombre d'iteration avant la boucle : ",cpt)
+from random import *
+def exercice13():
+    tas1=int(randint(1,20))
+    tas2=int(randint(1,20))
+    n=True
+    joueur=1
+    while n:
+        print("Tas 1: ","* "*tas1)
+        print("Tas 2: ","*"*tas2)
+        if tas1==0 and tas2==0:
+            n=False
+            print("c'est le joueur ",joueur,"a gagné !")
+            
+        
+exercice13()
+        
