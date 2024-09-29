@@ -45,4 +45,12 @@ def memeDizaine(a,b):
 def memeParité(a,b):
     return a%2==b%2
 
-print(memeParité(4,2))
+def rectangle(H,L):
+    for i in range(H):
+        if i==0 or i==H-1:
+                print("* "*L)
+        else:
+            print("*"," "*(L-4),"*")
+
+def disque(R):
+    
