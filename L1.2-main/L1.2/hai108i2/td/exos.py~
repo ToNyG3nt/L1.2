@@ -1,0 +1,3 @@
+def indice (liste):
+    for i in range(len(liste)):
+        print(i ,' ' liste[i])
