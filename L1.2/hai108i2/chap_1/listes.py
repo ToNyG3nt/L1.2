@@ -178,12 +178,37 @@ def exercice12_2(d):
             cpt+=1
     print("nombre d'iteration avant la boucle : ",cpt)
 from random import *
+
+
+
 def exercice13():
     tas1=int(randint(1,20))
     tas2=int(randint(1,20))
     n=True
+    joueur =1
     while n:
-        print("Tas 1:","* "*tas1)
+        print(f"c'est au joueu {joueur} de jouer ")
+        if tas1==0:
+            print("\nTas 1:","* "*tas1)
+            print("Tas 2: ","* "*tas2)
+            print("combien de jeton voulez vous enlever au tas 2 ?")
+            jeton= int(input("combien de jeton voulez vous enlever ?"))  
+        elif tas2==0:
+            print("\nTas 1:","* "*tas1)
+            print("Tas 2: ","* "*tas2)
+            print("combien de jeton voulez vous enlever au tas 1 ?")
+            jeton= int(input("combien de jeton voulez vous enlever ?"))
+        elif tas1==0 and tas1==0:
+            print(f"le joueur {joueur} a perdu !")
+            n=False
+        else:
+            print("\nTas 1:","* "*tas1)
+            print("Tas 2: ","* "*tas2)
+            print("\nquel tas modifier ? (1 ou 2)")
+            tas=int(input())
+            jeton= int(input("combien de jeton voulez vous enlever ?"))
+
+        
+
         n=False
 exercice13()
-        
