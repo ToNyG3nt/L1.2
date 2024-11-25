@@ -121,7 +121,7 @@ def binaire(n):
 
 
 #TP 3
-#exercice 1
+liste=[1,1,0,0,1,0,0,1,0,1]
 def uneEtape(t):
     t2 = [0]*len(t)
     for i in range(len(t)):
@@ -133,71 +133,10 @@ def uneEtape(t):
         elif i==len(t)-1:
             t2[i]=t[i-1]
     return t2
-
-
-from os import *
-from time import sleep
-
-def afficheLigne(tab):
-    for elem in tab:
-        if elem==1:
-            print("\u2588 ",end='')
-        else:
-            print("_ ",end='')
-    print('\n')
-    sleep(0.4)
-    system("clear")
-def simulation(t):
-    afficheLigne(t)
-    t2=uneEtape(t)
-    while t2!=t:
-        afficheLigne(t2)
-        t=t2
-        t2=uneEtape(t)
-    
-    
-
-#exercice 2
-
-def demander():
-    lettre=str(input("entrer une lettre : "))
-    return lettre
-
-def affMot(mot):
-    t="".join(mot)
-    print(t)
-
-def transformer(mot):
-    m=[c for c in mot]
-    return m
-
-def pendu(nbErreurs):
-    motAdeviner= str(input("joueur 1 : entrer le mot a faire deviner : "))
-    system("clear")
-    tab1=transformer(motAdeviner)
-    tab2=['-'*(len(tab1)+1)]
-    running=True
-    erreurs=0
-    while running or erreurs!=nbErreurs:
-        lettre=demander()
-        if lettre in tab1:
-            for i in range(len(tab1)):
-                if tab1[i]==lettre:
-                    tab2[i]=lettre
-        if tab1==tab2:
-            print('Le joueur 2 gagne !')
-            running=False
-        else:
-            erreurs+=1
-        affMot(tab1)
-        print(f"erreurs: {erreurs}/{nbErreurs}")
-        if erreurs>=nbErreurs:
-                print("Le joueur 1 gagne !")
-                print(f'le mot etait : {affMot(tab1)}')
-                running=False
-
-pendu(4)
+                
+print(liste)
+print(uneEtape(liste))
             
-
-
+    
+                
                 
